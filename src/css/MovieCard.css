@@ -1,8 +1,19 @@
+:root {
+  --card-bg-color: #1a1a1a;
+  --card-text-color: #fff;
+}
+
+[data-theme="light"] {
+  --card-bg-color: #e2e2e2;
+  --card-text-color: #333;
+}
+
 .movie-card {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #1a1a1a;
+  background-color: var(--card-bg-color);
+  color: var(--card-text-color);
   transition: transform 0.2s;
   height: 100%;
   display: flex;

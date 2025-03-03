@@ -1,3 +1,13 @@
+:root {
+  --search-bg-color: #333;
+  --search-text-color: #c4ff64;
+}
+
+[data-theme="light"] {
+  --search-bg-color: #e2e2e2;
+  --search-text-color: #000000;
+}
+
 .home {
   padding: 2rem 0;
   width: 100%;
@@ -18,8 +28,8 @@
   padding: 0.75rem 1rem;
   border: none;
   border-radius: 4px;
-  background-color: #333;
-  color: #c4ff64;
+  background-color: var(--search-bg-color);
+  color: var(--search-text-color);
   font-size: 1rem;
 }
 

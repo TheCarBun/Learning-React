@@ -1,5 +1,15 @@
+:root {
+  --nav-bar-bg-color: #333;
+  --nav-bar-link-hov: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] {
+  --nav-bar-bg-color: #e2e2e2;
+  --nav-bar-link-hov: #bababa;
+}
+
 .navbar {
-  background-color: #000000;
+  background-color: var(--nav-bar-bg-color);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -25,7 +35,7 @@
 }
 
 .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--nav-bar-link-hov);
 }
 
 @media (max-width: 768px) {
