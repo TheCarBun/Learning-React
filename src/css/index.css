@@ -20,10 +20,10 @@
 }
 
 [data-theme="light"] {
-  background-color: #fff;
+  background-color: #f2ffde;
   --nav-text-color: #000;
-  --nav-text-hover-color: #3f3f3f;
-  --theme-button-color: #fff;
+  --nav-text-hover-color: #202020;
+  --theme-button-color: #f2ffde;
   --theme-button-hover-color: #515151;
 }
 

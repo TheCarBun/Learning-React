@@ -1,11 +1,14 @@
 :root {
   --search-bg-color: #333;
   --search-text-color: #c4ff64;
+  --search-box-shadow: #666;
+  --search-but-hov-col: ;
 }
 
 [data-theme="light"] {
-  --search-bg-color: #e2e2e2;
+  --search-bg-color: #c4ff7e;
   --search-text-color: #000000;
+  --search-box-shadow: #94fc15;
 }
 
 .home {
@@ -35,12 +38,12 @@
 
 .search-input:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #666;
+  box-shadow: 0 0 0 2px var(--search-box-shadow);
 }
 
 .search-button {
   padding: 0.75rem 1.5rem;
-  background-color: #8edd0e;
+  background-color: var(--search-box-shadow);
   color: black;
   border-radius: 4px;
   font-weight: 500;

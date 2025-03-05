@@ -1,11 +1,13 @@
 :root {
   --card-bg-color: #1a1a1a;
   --card-text-color: #fff;
+  --card-sec-text-col: #999;
 }
 
 [data-theme="light"] {
-  --card-bg-color: #e2e2e2;
-  --card-text-color: #333;
+  --card-bg-color: #c4ff7e;
+  --card-text-color: #000;
+  --card-sec-text-col: #6fa42e;
 }
 
 .movie-card {
@@ -106,7 +108,7 @@
 }
 
 .movie-info p {
-  color: #999;
+  color: var(--card-sec-text-col);
   font-size: 0.9rem;
 }
 
