@@ -1,16 +1,20 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getMovieDetails } from "../services/api";
+import { getMovieDetails, getMovieTrailer } from "../services/api";
 import "../css/MovieDetails.css";
 
 const MovieDetails = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
+  const [trailerUrl, setTrailerUrl] = useState(null);
 
   useEffect(() => {
     const fetchDetails = async () => {
       const movieData = await getMovieDetails(id);
       setMovie(movieData);
+
+      const trailer = await getMovieTrailer(id);
+      setTrailerUrl(trailer);
     };
 
     fetchDetails();
@@ -50,6 +54,18 @@ const MovieDetails = () => {
           </div>
         </div>
       </div>
+      {trailerUrl ? (
+        <div className="movie-trailer">
+          <h2>Official Trailer</h2>
+          <iframe
+            src={trailerUrl}
+            title="Movie Trailer"
+            allowFullScreen
+          ></iframe>
+        </div>
+      ) : (
+        <p className="no-trailer">No trailer available.</p>
+      )}
     </div>
   );
 };

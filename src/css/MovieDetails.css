@@ -1,12 +1,14 @@
 :root {
   --text-color: #fff;
   --button-text-color: #c4ff64;
+  --button-bg-color: #151515;
   --tag-text-color: #7e7e7e;
 }
 
 [data-theme="light"] {
   --text-color: #000;
-  --button-text-color: #727272;
+  --button-text-color: #131313;
+  --button-bg-color: #e6e6e6;
 }
 
 .movie-details {
@@ -24,18 +26,17 @@
   display: inline-block;
   margin-bottom: 20px;
   padding: 10px 15px;
-  background-color: var(--primary-color);
   color: var(--button-text-color);
   text-decoration: none;
   border: 1px solid transparent;
   border-radius: 5px;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: all 0.3s;
 }
 
 .movie-details .back-button:hover {
   border: 1px solid var(--button-text-color);
-  background-color: var(--primary-dark);
+  background-color: var(--button-bg-color);
 }
 
 .movie-header {
@@ -45,7 +46,7 @@
 }
 
 .movie-header img {
-  width: 250px;
+  width: 200px;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -69,6 +70,22 @@
   margin-top: 20px;
   font-size: 14px;
   color: gray;
+}
+
+.movie-trailer {
+  margin: 50px 0;
+}
+
+.movie-trailer h2 {
+  margin: 20px 0;
+  color: var(--button-text-color);
+}
+
+.movie-trailer iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  border-radius: 10px;
 }
 
 @media (max-width: 600px) {
